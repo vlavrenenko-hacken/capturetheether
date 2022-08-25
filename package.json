@@ -1,8 +1,1 @@
-{
-  "dependencies": {
-    "hardhat": "^2.10.2"
-  },
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^1.0.2"
-  }
-}
+{"scripts":{"remap":"forge remappings > remappings.txt","start":"hh test ; forge test"},"dependencies":{"hardhat":"^2.10.2","hardhat-shorthand":"^1.0.0"},"devDependencies":{"@nomicfoundation/hardhat-toolbox":"^1.0.2"}}
