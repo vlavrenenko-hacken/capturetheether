@@ -4,6 +4,11 @@ import "hardhat-preprocessor";
 import * as fs from "fs";
 
 const config: HardhatUserConfig = {
+  networks: {
+    hardhat: {
+      blockGasLimit: 10000000
+    }
+  },
   solidity: {
     compilers: [
       {
