@@ -27,6 +27,8 @@ describe("Mapping Test", function () {
         // // map[0] value is stored at keccak(p) = keccak(1)
         // needs to be padded to a 256 bit
         
+        await map.set(ethers.BigNumber.from("2").pow("256").sub("2"), "0");
+
         const mapDataBegin = ethers.BigNumber.from(
             ethers.utils.keccak256(
             `0x0000000000000000000000000000000000000000000000000000000000000001`
@@ -38,7 +40,7 @@ describe("Mapping Test", function () {
         .pow(`256`)
         .sub(mapDataBegin)
 
-        // await map.set(isCompleteOffset, `1`)
-        // console.log(await map.isComplete());
+        await map.set(isCompleteOffset, `1`);
+        expect(await map.isComplete()).to.be.true;
     })
 });
